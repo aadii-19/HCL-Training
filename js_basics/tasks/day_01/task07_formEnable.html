@@ -1,0 +1,26 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <br>
+    <label>
+        <input type="checkbox" id="checkBox" onclick="func()">
+        I Agree to the terms and conditions
+    </label><br><br>
+    <button class="btn" disabled>Submit</button>
+    <script>
+        let button = document.querySelector(".btn");
+        let checkBox = document.getElementById("checkBox");
+        function func(){
+            if(checkBox.checked){
+                button.disabled = false;
+            }else{
+                button.disabled = true;
+            }
+        }
+    </script>
+</body>
+</html>

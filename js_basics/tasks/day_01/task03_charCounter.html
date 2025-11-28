@@ -1,0 +1,23 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Character Counter</h3>
+    <p>Enter Text Here: </p>
+    <input type="text" class="charText">
+    <p id="demo"></p>
+    <script>
+        let count = 0;
+        let textClass = document.querySelector(".charText");
+        let show = document.getElementById("demo");
+        textClass.addEventListener("keyup",()=>{
+            count = textClass.value.length;
+            console.log(count);
+            show.innerHTML = `The character count is ${count}`;
+        })
+    </script>
+</body>
+</html>

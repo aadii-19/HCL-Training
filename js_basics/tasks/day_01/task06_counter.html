@@ -1,0 +1,25 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button class="inc">Increment</button>
+    <button class="dec">Decrement</button>
+    <p id="demo"></p>
+    <script>
+        let count = 0;
+        let inc = document.querySelector(".inc");
+        let dec = document.querySelector(".dec");
+        inc.addEventListener("click",()=>{
+            count+=1;
+            document.getElementById('demo').innerHTML=`The count is ${count}`;
+        })
+        dec.addEventListener("click",()=>{
+            count-=1;
+            document.getElementById('demo').innerHTML=`The count is ${count}`;
+        })
+    </script>
+</body>
+</html>

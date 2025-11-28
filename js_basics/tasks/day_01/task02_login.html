@@ -1,0 +1,38 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .p{
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <p>Id</p>
+<input type="text" class="username" placeholder="Enter UserId">
+<p>Password</p>
+<input type="password" class="password" placeholder="Enter PassWord">
+
+<button class="btn">Show Password</button>
+
+<script>
+    //Select html element using css selector using querySelector
+    let pass = document.querySelector(".password");
+    let button = document.querySelector(".btn");
+
+    button.addEventListener("click",()=>{
+        if(pass.type==="password"){
+            button.innerText = "Hide password";
+            pass.type = "text";
+        }
+        else{
+            button.innerText = "Show password";
+            pass.type = "password";
+        }
+    })
+</script>
+
+</body>
+</html>

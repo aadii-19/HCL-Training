@@ -1,0 +1,30 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="fun('prev')">Prev</button>
+    <button onclick="fun('next')">Next</button>
+    <img class="img" src="./assets/img1.jpg" alt="">
+    <p id="demo"></p>
+    <script>
+        let counter = 1;
+        let image = document.querySelector(".img")
+        function fun(val){
+            if(val==='prev'){
+                if(counter>1 && counter<=3){
+                    counter-=1;
+                    image.src = `./assets/img${counter}.jpg`;
+                }
+            }else{
+                if(counter<3 && counter>=1){
+                    counter+=1;
+                    image.src = `./assets/img${counter}.jpg`;
+                }
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Calculator</title>
+        <style>
+            .newClass{
+                background-color: aquamarine;
+            }
+        </style>
+    </head>
+    <body>
+        <button class="btn" onclick="func()">Click Before</button>
+        <script>
+            function func(){
+                if(document.querySelector(".btn").innerHTML==="Click Before"){
+                    document.querySelector(".btn").classList.add("newClass");
+                    document.querySelector(".btn").innerHTML = "Click after";
+                }
+                else{
+                    document.querySelector(".btn").classList.remove("newClass");
+                    document.querySelector(".btn").innerHTML = "Click Before";
+                }
+            }
+        </script>  
+    </body>
+</html>
